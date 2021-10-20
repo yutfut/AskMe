@@ -1,0 +1,98 @@
+main > .my_container {
+    padding: 60px 15px 0;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.question {
+    margin: 30 px;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.question_img {
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+button.like {
+    background-color: rgba(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button.dislike {
+    background-color: rgba(0, 0, 0);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.avatar {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paginator {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centre_title {
+
+    margin-left: 40px;
+}
+
+.post {
+    padding-top: 20px;
+}
+
+.new_questions {
+    margin-left: 40px;
+    font-size: 20pt;
+}
+
+.hot_questions {
+    font-size: 12pt;
+}
+
+.popular_tags {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.popular_tag {
+    margin-right: 20px;
+    font-size: 13pt;
+}
+
+.popular_members {
+    font-size: 13pt;
+}
+
+.pop {
+    padding-left: 40px;
+}
