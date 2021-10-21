@@ -1,5 +1,5 @@
 main > .my_container {
-    padding: 60px 15px 0;
+    padding: 100px 15px 0;
     margin-right: 100px;
     margin-left: 100px;
 }
@@ -15,10 +15,29 @@ main > .my_container {
 
 .question_img {
     object-fit: contain;
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     margin-top: 20px;
     margin-left: 0px;
+    border-radius: 10%;
+}
+
+.top_img {
+    object-fit: contain;
+    max-width: 70px;
+    max-height: 70px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 10%;
+}
+
+.settings_img {
+    object-fit: contain;
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 10%;
 }
 
 .inline {
@@ -48,26 +67,25 @@ button.dislike {
 }
 
 .paginator {
-    padding: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.search {
+.footer {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .centre_title {
-
     margin-left: 40px;
 }
 
 .post {
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .new_questions {
@@ -95,4 +113,9 @@ button.dislike {
 
 .pop {
     padding-left: 40px;
+}
+
+.my_btn-outline-success{
+    color: black;
+    border-color: black
 }
