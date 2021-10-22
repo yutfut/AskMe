@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Log In {% endblock %}
+
+{% block content %}
+	<div>
+		{% include 'include/question.html'%}
+	</div>
+	<div class="row">
+		<div class="col-1">
+		</div>
+		<div class="col-11">
+			<h5 class="new_questions post">Answers</h5>
+			{% include 'include/answer.html'%}
+			<div class="post" style="margin-left: 20px; margin-right: 20px">
+				<input class="form-control me-2" style="margin-top: 20px; height: 100px"
+							 placeholder="Enter your answer here ...">
+				<button class="btn my_btn-outline-success" style="margin-top: 10px" type="submit">Answer</button>
+			</div>
+		</div>
+	</div>
+{% endblock %}

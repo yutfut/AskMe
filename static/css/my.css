@@ -24,8 +24,8 @@ main > .my_container {
 
 .top_img {
     object-fit: contain;
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 40px;
+    max-height: 40px;
     margin-top: 0px;
     margin-left: 0px;
     border-radius: 10%;
