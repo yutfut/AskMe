@@ -7,18 +7,15 @@
 			Log In
 		</p>
 	</div>
-	<div>
-		<p style="color: red">Sorry, wrong password</p>
-	</div>
+
 	<div class="row">
 		<div class="row" style="padding-top: 20px">
 			<div class="col-2">
 				Login
 			</div>
-			<div class="col-10">
-				<form class="d-flex">
-					<input class="form-control me-2" style="width: 300px" placeholder="Login">
-				</form>
+			<div class="col-10 my_div">
+				<input class="form-control me-2" type="text" id="login" name="login" placeholder=" " required>
+				<label for="login">Login</label>
 			</div>
 		</div>
 
@@ -26,17 +23,20 @@
 			<div class="col-2">
 				Password
 			</div>
-			<div class="col-10">
-				<form class="d-flex">
-					<input class="form-control me-2" style="width: 300px" placeholder="Password">
-				</form>
+			<div class="col-10 my_div">
+				<input class="form-control me-2" type="password" id="password" name="password" placeholder=" " pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}" required>
+				<label for="password">Password</label>
+				<div class="requirements">
+					Must be a valid password
+				</div>
 			</div>
 		</div>
+
 		<div class="row" style="padding-top: 20px">
 			<div class="col-2">
 			</div>
 			<div class="col-10">
-				<button class="btn btn-outline-success" type="submit">Log In</button>
+				<input class="btn btn-outline-success my_button" type="submit" value="Log In" />
 				<div style="margin-top: 10px" >
 					<a href="">create new account</a>
 				</div>

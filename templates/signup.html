@@ -1,83 +1,91 @@
 {% extends 'base.html' %}
-{% block title %} Log In {% endblock %}
+{% block title %} Sign up {% endblock %}
 
 {% block content %}
+
 	<div>
 		<div class="inline">
 			<p class="new_questions">
 				Registration
 			</p>
 		</div>
-		<div>
-			<p style="color: red">Sorry, this email address already registered</p>
-		</div>
-		<div class="row">
-			<div class="row" style="padding-top: 20px">
-				<div class="col-2">
-					Login
-				</div>
-				<div class="col-10">
-					<form class="d-flex">
-						<input class="form-control me-2" placeholder="Login">
-					</form>
-				</div>
-			</div>
+		<form action="">
+			<div class="row">
 
-			<div class="row" style="padding-top: 20px">
-				<div class="col-2">
-					Email
+				<div class="row" style="padding-top: 20px">
+					<div class="col-2">
+						Login
+					</div>
+					<div class="col-10 my_div">
+						<input class="form-control me-2" type="text" id="login" name="login" placeholder=" " required>
+						<label for="login">Login</label>
+					</div>
 				</div>
-				<div class="col-10">
-					<form class="d-flex">
-						<input class="form-control me-2" placeholder="Email">
-					</form>
-				</div>
-			</div>
 
-			<div class="row" style="padding-top: 20px">
-				<div class="col-2">
-					NickName
+				<div class="row" style="padding-top: 20px">
+					<div class="col-2">
+						Email
+					</div>
+					<div class="col-10 my_div">
+						<input class="form-control me-2" type="email" id="email" name="email" placeholder=" " required>
+						<label for="email">Email</label>
+						<div class="requirements">
+							Must be a valid email address
+						</div>
+					</div>
 				</div>
-				<div class="col-10">
-					<input class="form-control me-2" placeholder="NickName">
-				</div>
-			</div>
 
-			<div class="row" style="padding-top: 20px">
-				<div class="col-2">
-					Password
+				<div class="row" style="padding-top: 20px">
+					<div class="col-2">
+						NickName
+					</div>
+					<div class="col-10  my_div">
+						<input class="form-control me-2" type="text" id="nickname" name="nickname" placeholder=" " required>
+						<label for="nickname">NickName</label>
+					</div>
 				</div>
-				<div class="col-10">
-					<input class="form-control me-2" placeholder="Password">
-				</div>
-			</div>
 
-			<div class="row" style="padding-top: 20px">
-				<div class="col-2">
-					Repeat password
+				<div class="row" style="padding-top: 20px">
+					<div class="col-2">
+						Password
+					</div>
+					<div class="col-10  my_div">
+						<input class="form-control me-2" type="password" id="password" name="password" placeholder=" " pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}" required>
+						<label for="password">Password</label>
+					</div>
 				</div>
-				<div class="col-10">
-					<input class="form-control me-2" placeholder="Repeat password">
-				</div>
-			</div>
 
-			<div class="row" style="padding-top: 20px">
-				<div class="col-2">
-					Upload avatar
-				</div>
-				<div class="col-10 d-flex">
-					<input class="form-control me-2" style="width: 200px;" placeholder="Choose">
-					<button class="btn my_btn-outline-success" type="submit">Choose</button>
-				</div>
-			</div>
+				<div class="row" style="padding-top: 20px">
+					<div class="col-2">
+						Repeat password
+					</div>
+					<div class="col-10  my_div">
+						<input class="form-control me-2" type="password" id="repeat_password" name="repeat_password" placeholder=" "
+									 pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}" required>
+						<label for="repeat_password">Repeat password</label>
 
-			<div class="row" style="padding-top: 20px">
-				<div class="col-2">
+					</div>
 				</div>
-				<div class="col-10">
-					<button class="btn btn-outline-success" type="submit">Register</button>
+
+				<div class="row" style="padding-top: 20px">
+					<div class="col-2" >
+						Upload avatar
+					</div>
+					<div class="col-10 d-flex">
+						<input type="file" class="form-control me-2">
+					</div>
 				</div>
+
+				<div class="row" style="padding-top: 20px">
+					<div class="col-2">
+					</div>
+					<div class="col-10">
+						<input type="submit" class="btn btn-outline-success my_button" value="Register" />
+					</div>
+				</div>
+
 			</div>
-		</div>
+		</form>
+
 	</div>
 {% endblock %}
