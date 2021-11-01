@@ -7,33 +7,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>login</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
-
-
-
-    <!-- Bootstrap core CSS -->
-	<link href="static/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-
-    <!-- Custom styles for this template -->
+		<link href="static/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/css/my.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
@@ -60,21 +35,24 @@
   <div class="my_container">
     <div class ="row">
 			<div class="col-9">
-				<div>
-					<div class="inline">
-						<p class="new_questions">
-							Log In
-						</p>
-					</div>
+
+				<div class="inline">
+					<p class="new_questions">
+						Log In
+					</p>
+				</div>
+
+				<form action="#0">
+
 					<div class="row">
+
 						<div class="row" style="padding-top: 20px">
 							<div class="col-2">
 								Login
 							</div>
-							<div class="col-10">
-								<form class="d-flex">
-									<input class="form-control me-2" style="width: 300px" placeholder="Login">
-								</form>
+							<div class="col-10 my_div">
+								<input class="form-control me-2" type="text" id="login" name="login" placeholder=" " required>
+								<label for="login">Login</label>
 							</div>
 						</div>
 
@@ -82,10 +60,12 @@
 							<div class="col-2">
 								Password
 							</div>
-							<div class="col-10">
-								<form class="d-flex">
-									<input class="form-control me-2" style="width: 300px" placeholder="Password">
-								</form>
+							<div class="col-10 my_div">
+								<input class="form-control me-2" type="password" id="password" name="password" placeholder=" " pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}" required>
+								<label for="password">Password</label>
+								<div class="requirements">
+									Must be a valid password
+								</div>
 							</div>
 						</div>
 
@@ -93,14 +73,17 @@
 							<div class="col-2">
 							</div>
 							<div class="col-10">
-								<button class="btn btn-outline-success" type="submit">Log In</button>
+								<input class="btn btn-outline-success my_button" type="submit" value="Log In" />
 								<div style="margin-top: 10px" >
 									<a href="">create new account</a>
 								</div>
 							</div>
 						</div>
+
 					</div>
-				</div>
+
+				</form>
+
 			</div>
 			<div class="col-3 pop">
 				<div>

@@ -66,21 +66,24 @@
   <div class="my_container">
     <div class ="row">
 			<div class="col-9">
-				<div>
-					<div class="inline">
-						<p class="new_questions">
-							Settings: Nick Name
-						</p>
-					</div>
+
+				<div class="inline">
+					<p class="new_questions">
+						Settings: Nick Name
+					</p>
+				</div>
+
+				<form action="#0">
+
 					<div class="row">
+
 						<div class="row" style="padding-top: 20px">
 							<div class="col-2">
 								Login
 							</div>
-							<div class="col-10">
-								<form class="d-flex">
-									<input class="form-control me-2" placeholder="Login">
-								</form>
+							<div class="col-10 my_div">
+								<input class="form-control me-2" type="text" id="login" name="login" placeholder=" " required>
+								<label for="login">Login</label>
 							</div>
 						</div>
 
@@ -88,10 +91,12 @@
 							<div class="col-2">
 								Email
 							</div>
-							<div class="col-10">
-								<form class="d-flex">
-									<input class="form-control me-2" placeholder="Email">
-								</form>
+							<div class="col-10 my_div">
+								<input class="form-control me-2" type="email" id="email" name="email" placeholder=" " required>
+								<label for="email">Email</label>
+									<div class="requirements">
+										Must be a valid email address
+									</div>
 							</div>
 						</div>
 
@@ -99,9 +104,10 @@
 							<div class="col-2">
 								NickName
 							</div>
-							<div class="col-10">
-								<input class="form-control me-2" placeholder="NickName">
-							</div>
+							<div class="col-10 my_div">
+									<input class="form-control me-2" type="text" id="nickname" name="nickname" placeholder=" " required>
+									<label for="nickname">NickName</label>
+								</div>
 						</div>
 
 						<div class="row" style="padding-top: 20px">
@@ -111,8 +117,7 @@
 							<div class="col-10">
 								<img class="settings_img" src="static/img/img.JPG" alt="">
 								<div class="d-flex" style="margin-top: 20px">
-									<input class="form-control me-2" style="width: 200px;" placeholder="Choose">
-									<button class="btn my_btn-outline-success" type="submit">Choose</button>
+									<input type="file" class="form-control me-2">
 								</div>
 							</div>
 						</div>
@@ -121,11 +126,14 @@
 							<div class="col-2">
 							</div>
 							<div class="col-10">
-								<button class="btn btn-outline-success" type="submit">Save</button>
+								<input class="btn btn-outline-success my_button" type="submit" value="Save" />
 							</div>
 						</div>
+
 					</div>
-				</div>
+
+				</form>
+
 			</div>
 			<div class="col-3 pop">
 				<div>
