@@ -8,39 +8,47 @@
 		</p>
 	</div>
 
-	<div class="row">
-		<div class="row" style="padding-top: 20px">
-			<div class="col-2">
-				Login
-			</div>
-			<div class="col-10 my_div">
-				<input class="form-control me-2" type="text" id="login" name="login" placeholder=" " required>
-				<label for="login">Login</label>
-			</div>
-		</div>
+	<form action="#0">
 
-		<div class="row" style="padding-top: 20px">
-			<div class="col-2">
-				Password
-			</div>
-			<div class="col-10 my_div">
-				<input class="form-control me-2" type="password" id="password" name="password" placeholder=" " pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}" required>
-				<label for="password">Password</label>
-				<div class="requirements">
-					Must be a valid password
+		<div class="row">
+
+			<div class="row" style="padding-top: 20px">
+				<div class="col-2">
+					Login
+				</div>
+				<div class="col-10 my_div">
+					<input class="form-control me-2" type="text" id="login" name="login" placeholder=" " required>
+					<label for="login">Login</label>
 				</div>
 			</div>
-		</div>
 
-		<div class="row" style="padding-top: 20px">
-			<div class="col-2">
-			</div>
-			<div class="col-10">
-				<input class="btn btn-outline-success my_button" type="submit" value="Log In" />
-				<div style="margin-top: 10px" >
-					<a href="">create new account</a>
+			<div class="row" style="padding-top: 20px">
+				<div class="col-2">
+					Password
+				</div>
+				<div class="col-10 my_div">
+					<input class="form-control me-2" type="password" id="password" name="password" placeholder=" " pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}" required>
+					<label for="password">Password</label>
+					<div class="requirements">
+						Must be a valid password
+					</div>
 				</div>
 			</div>
+
+			<div class="row" style="padding-top: 20px">
+				<div class="col-2">
+				</div>
+				<div class="col-10">
+					<input class="btn btn-outline-success my_button" type="submit" value="Log In" />
+					<div style="margin-top: 10px" >
+						<a href="">create new account</a>
+					</div>
+				</div>
+			</div>
+
 		</div>
-	</div>
+
+	</form>
+
+
 {% endblock %}
