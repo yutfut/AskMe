@@ -119,3 +119,121 @@ button.dislike {
     color: black;
     border-color: black
 }
+
+.my_div {
+    position: relative;
+    background: white;
+    border-bottom: 1px, solid #ccc;
+}
+
+div > label {
+    opacity: 0.3;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+}
+
+#login,
+#email,
+#nickname,
+#password,
+#repeat_password,
+#title,
+#text,
+#tags {
+    border: 0;
+    background: #eee;
+}
+
+#login:focus,
+#email:focus,
+#nickname:focus,
+#password:focus,
+#repeat_password:focus,
+#title:focus,
+#text:focus,
+#tags:focus {
+    outline: 0;
+    background: white;
+}
+
+#login:focus + label,
+#email:focus + label,
+#nickname:focus + label,
+#password:focus + label,
+#repeat_password:focus + label,
+#title:focus + label,
+#text:focus + label,
+#tags:focus + label {
+    opacity: 0;
+}
+
+#login:valid,
+#email:valid,
+#nickname:valid,
+#password:valid,
+#repeat_password:valid,
+#title:valid,
+#text:valid,
+#tags:valid {
+    background: #7FF679;
+}
+
+#login:valid + label,
+#email:valid + label,
+#nickname:valid + label,
+#password:valid + label,
+#repeat_password:valid + label,
+#title:valid + label,
+#text:valid + label,
+#tags:valid + label {
+    opacity: 0;
+}
+
+#login:invalid:not(:focus):not(:placeholder-shown),
+#email:invalid:not(:focus):not(:placeholder-shown),
+#nickname:invalid:not(:focus):not(:placeholder-shown),
+#password:invalid:not(:focus):not(:placeholder-shown),
+#repeat_password:invalid:not(:focus):not(:placeholder-shown),
+#title:invalid:not(:focus):not(:placeholder-shown),
+#text:invalid:not(:focus):not(:placeholder-shown),
+#tags:invalid:not(:focus):not(:placeholder-shown) {
+    background: pink;
+}
+
+#login:invalid:not(:focus):not(:placeholder-shown) + label,
+#email:invalid:not(:focus):not(:placeholder-shown) + label,
+#nickname:invalid:not(:focus):not(:placeholder-shown) + label,
+#password:invalid:not(:focus):not(:placeholder-shown) + label,
+#repeat_password:invalid:not(:focus):not(:placeholder-shown) + label,
+#title:not(:focus):not(:placeholder-shown) + label,
+#text:not(:focus):not(:placeholder-shown) + label,
+#tags:not(:focus):not(:placeholder-shown) + label {
+    opacity: 0;
+}
+
+#login:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+#email:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+#nickname:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+#password:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+#repeat_password:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+#title:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+#text:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+#tags:invalid:not(:focus):not(:placeholder-shown) ~ .requirements {
+    max-height: 200px;
+    padding-right: 20px;
+}
+
+div .requirements {
+    padding-left: 10px;
+    color: #999;
+    max-height: 0;
+    transition: 0,28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+}
+
+input[type="submit"] {
+    display: block;
+}
