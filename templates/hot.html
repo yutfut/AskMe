@@ -6,8 +6,8 @@
 	<div>
 		<div class="inline">
 			<p class="new_questions">
-				New Questions
-				<a href="{% url 'hot'%}" class="hot_questions">Hot Questions</a>
+				Hot Questions
+				<a href="{% url 'index'%}" class="hot_questions">New Questions</a>
 			</p>
 		</div>
 		{% for question in page %}

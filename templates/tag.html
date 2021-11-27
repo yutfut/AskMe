@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %} Log In {% endblock %}
+{% load static %}
 
 {% block content %}
 	<div>
@@ -9,123 +10,9 @@
 			</p>
 		</div>
 		{% include 'include/question.html'%}
-		<div class="post">
-			<div class="row question">
-				<div class="col-2">
-					<div class="avatar">
-						<img class="question_img" src="static/img/img.JPG" alt="">
-						<h5>
-							Nick Name
-						</h5>
-					</div>
-				</div>
-				<div class="col-10">
-					<h2>
-						Зголовок вопроса!
-					</h2>
-					<p>
-						Текст вопрос!
-						Godrej Properties’s new residential stock - Godrej Park Retreat is developing in gilded surrounds of Sarjapur Road, East bangalore. The basis spreads over a immense land place and includes top rate-class residences which might be vaastu compliant, perfectly ventilated and well-lit gadgets.
-					</p>
-				</div>
-				<dev class="row">
-					<div class="col-2 avatar">
-						<div class="inline">
-							<a>4</a>
-							<button class="like" type="submit">Like</button>
-							<button class="dislike" type="submit" style="color: white">Dislike</button>
-						</div>
-					</div>
-					<div class="inline col-10">
-							<a href="">answers</a>
-							<a style="">Tags:
-								<a href="">Django</a>
-								<a href="">Python</a>
-								<a href="">Pytest</a>
-								<a href="">View</a>
-							</a>
-					</div>
-				</dev>
-			</div>
-		</div>
-		<div class="post">
-			<div class="row question">
-				<div class="col-2">
-					<div class="avatar">
-						<img class="question_img" src="static/img/img.JPG" alt="">
-						<h5>
-							Nick Name
-						</h5>
-					</div>
-				</div>
-				<div class="col-10">
-					<h2>
-						Зголовок вопроса!
-					</h2>
-					<p>
-						Текст вопрос!
-						Godrej Properties’s new residential stock - Godrej Park Retreat is developing in gilded surrounds of Sarjapur Road, East bangalore. The basis spreads over a immense land place and includes top rate-class residences which might be vaastu compliant, perfectly ventilated and well-lit gadgets.
-					</p>
-				</div>
-				<dev class="row">
-					<div class="col-2 avatar">
-						<div class="inline">
-							<a>4</a>
-							<button class="like" type="submit">Like</button>
-							<button class="dislike" type="submit" style="color: white">Dislike</button>
-						</div>
-					</div>
-					<div class="inline col-10">
-							<a href="">answers</a>
-							<a style="">Tags:
-								<a href="">Django</a>
-								<a href="">Python</a>
-								<a href="">Pytest</a>
-								<a href="">View</a>
-							</a>
-					</div>
-				</dev>
-			</div>
-		</div>
-		<div class="post">
-			<div class="row question">
-				<div class="col-2">
-					<div class="avatar">
-						<img class="question_img" src="static/img/img.JPG" alt="">
-						<h5>
-							Nick Name
-						</h5>
-					</div>
-				</div>
-				<div class="col-10">
-					<h2>
-						Зголовок вопроса!
-					</h2>
-					<p>
-						Текст вопрос!
-						Godrej Properties’s new residential stock - Godrej Park Retreat is developing in gilded surrounds of Sarjapur Road, East bangalore. The basis spreads over a immense land place and includes top rate-class residences which might be vaastu compliant, perfectly ventilated and well-lit gadgets.
-					</p>
-				</div>
-				<dev class="row">
-					<div class="col-2 avatar">
-						<div class="inline">
-							<a>4</a>
-							<button class="like" type="submit">Like</button>
-							<button class="dislike" type="submit" style="color: white">Dislike</button>
-						</div>
-					</div>
-					<div class="inline col-10">
-							<a href="">answers</a>
-							<a style="">Tags:
-								<a href="">Django</a>
-								<a href="">Python</a>
-								<a href="">Pytest</a>
-								<a href="">View</a>
-							</a>
-					</div>
-				</dev>
-			</div>
-		</div>
+		{% include 'include/question.html'%}
+		{% include 'include/question.html'%}
+
 		{% include 'include/paginator.html'%}
 	</div>
 {% endblock %}

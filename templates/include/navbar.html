@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 	<div class="container-fluid">
-		<a class="navbar-brand" style="margin-left: 20px" href="#">AskMe</a>
+		<a class="navbar-brand" style="margin-left: 20px" href="{% url 'ask'%}">AskMe</a>
 		<form class="d-flex">
 			<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 			<button class="btn btn-outline-success" type="submit">Search</button>
@@ -13,14 +13,14 @@
 						<a style="color: white">
 							Nick Name
 						<br></a>
-						<a href="">settings<br></a>
+						<a href="{% url 'settings' %}">settings<br></a>
 						<a href="">logout</a>
 					</div>
 				</div>
 			{% else %}
 				<div class="inline d-flex">
-					<a href="">Log in</a>
-					<a href="" style="margin: 0 20px 0">Register</a>
+					<a href="{% url 'login' %}">Log in</a>
+					<a href="{% url 'signup' %}" style="margin: 0 20px 0">Register</a>
 				</div>
 			{% endif%}
 		</div>

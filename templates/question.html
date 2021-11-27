@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %} Log In {% endblock %}
+{% load static %}
 
 {% block content %}
 	<div>
@@ -10,7 +11,10 @@
 		</div>
 		<div class="col-11">
 			<h5 class="new_questions post">Answers</h5>
-			{% include 'include/answer.html'%}
+			{% for answer in answers %}
+				{% include 'include/answer.html'%}
+			{% endfor %}
+			{% include 'include/paginator.html'%}
 			<div class="post" style="margin-left: 20px; margin-right: 20px">
 				<input class="form-control me-2" style="margin-top: 20px; height: 100px"
 							 placeholder="Enter your answer here ...">
