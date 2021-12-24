@@ -5,17 +5,15 @@
 
 		<div class="col-2">
 			<div class="avatar">
-				<img class="question_img" src="{% static 'img/2.jpg' %}" alt="">
+				<img class="question_img" src="{{ answer.author.avatar }}" alt="">
 				<h5>
-					Nick Name
+					{{ answer.author.user.username }}
 				</h5>
 			</div>
 		</div>
 
 		<div class="col-10">
 			<p class="post">
-<!--				Текст ответа!-->
-<!--				Godrej Properties’s new residential stock - Godrej Park Retreat is developing in gilded surrounds of Sarjapur Road, East bangalore. The basis spreads over a immense land place and includes top rate-class residences which might be vaastu compliant, perfectly ventilated and well-lit gadgets.-->
 				{{ answer.text }}
 			</p>
 		</div>

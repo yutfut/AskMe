@@ -4,38 +4,35 @@
 	<div class="row question">
 		<div class="col-2">
 			<div class="avatar">
-				<img class="question_img" src="{% static 'img/1.jpg' %}" alt="">
+				<img class="question_img" src="{{ question.author.avatar }}" alt="">
 				<h5>
-					Nick Name
+					{{ question.author.user.username }}
 				</h5>
 			</div>
 		</div>
 		<div class="col-10">
 			<h2>
 				{{ question.title }}
-				Зголовок вопроса!
 			</h2>
 			<p>
 				{{ question.text }}
-				Текст вопрос!
-				Godrej Properties’s new residential stock - Godrej Park Retreat is developing in gilded surrounds of Sarjapur Road, East bangalore. The basis spreads over a immense land place and includes top rate-class residences which might be vaastu compliant, perfectly ventilated and well-lit gadgets.
 			</p>
 		</div>
 		<dev class="row">
 			<div class="col-2 avatar">
 				<div class="inline">
-					<a>4</a>
+					<a> {{ question.like }} </a>
 					<button class="like" type="submit">Like</button>
 					<button class="dislike" type="submit" style="color: white">Dislike</button>
+					<a> {{ question.dislike }} </a>
 				</div>
 			</div>
 			<div class="inline col-10">
-					<a href="">answers</a>
+					<a href="{% url 'question' question.pk %}">answers:</a>
 					<a style="">Tags:
-						<a href="">Django</a>
-						<a href="">Python</a>
-						<a href="">Pytest</a>
-						<a href="">View</a>
+						{% for tag in question.tags.all %}
+							<a href="{% url 'tag' tag %}"> {{ tag }} </a>
+						{% endfor%}
 					</a>
 			</div>
 		</dev>

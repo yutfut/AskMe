@@ -6,12 +6,12 @@
 			<button class="btn btn-outline-success" type="submit">Search</button>
 		</form>
 		<div style="width: 200px">
-			{% if user.is_authenticated %}
+			{% if request.user.is_authenticated %}
 				<div class="inline d-flex">
-					<img class="top_img" src="static/img/img.JPG" alt="">
+					<img class="top_img" src="{{ request.avatar }}" alt="">
 					<div style="margin: 0 20px 0 10px">
 						<a style="color: white">
-							Nick Name
+							{{ request.user.username }}
 						<br></a>
 						<a href="{% url 'settings' %}">settings<br></a>
 						<a href="">logout</a>
