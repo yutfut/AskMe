@@ -1,6 +1,10 @@
+
+
 {% extends 'base.html' %}
 {% block title %} Ask {% endblock %}
 {% load static %}
+
+{% load bootstrap4 %}
 
 {% block content %}
 	<div>
@@ -10,51 +14,17 @@
 			</p>
 		</div>
 
-		<form action="#0">
+		{% bootstrap_css %}
 
-			<div class="row">
-
-				<div class="row" style="padding-top: 20px">
-					<div class="col-2">
-						Title
-					</div>
-					<div class="col-10 my_div">
-						<input class="form-control me-2" type="text" id="title" name="title" placeholder=" " required>
-						<label for="title">Title</label>
-					</div>
-				</div>
-
-				<div class="row" style="padding-top: 20px">
-					<div class="col-2">
-						Text
-					</div>
-					<div class="col-10 my_div">
-						<input class="form-control me-2" type="text" id="text" name="text" style="height: 300px" placeholder=" " required>
-						<label for="text">Text</label>
-					</div>
-				</div>
-
-				<div class="row" style="padding-top: 20px">
-					<div class="col-2">
-						Tags
-					</div>
-					<div class="col-10 my_div">
-						<input class="form-control me-2" type="text" id="tags" name="tags" placeholder=" " required>
-						<label for="tags">Tags</label>
-					</div>
-				</div>
-
-				<div class="row" style="padding-top: 20px">
-					<div class="col-2">
-					</div>
-					<div class="col-10">
-						<button class="btn btn-outline-success" type="submit">Ask</button>
-					</div>
-				</div>
-
-			</div>
-
-		</form>
+	<form action="/ask/" method="post" class="form">
+		{% csrf_token %}
+		{% bootstrap_form form %}
+		{% buttons %}
+			<button type="submit" class="btn btn-primary">
+				Ask
+			</button>
+		{% endbuttons %}
+	</form>
 
 	</div>
 {% endblock %}

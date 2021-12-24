@@ -14,7 +14,7 @@
 							{{ request.user.username }}
 						<br></a>
 						<a href="{% url 'settings' %}">settings<br></a>
-						<a href="">logout</a>
+						<a href="{% url 'logout'%}">logout</a>
 					</div>
 				</div>
 			{% else %}
