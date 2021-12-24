@@ -51,7 +51,7 @@ class Command(BaseCommand):
                     email=f.email(),
                     password="1"
                 ),
-                avatar="static/img/avatar_" + str(i % 7) + ".jpg",
+                avatar="static/img/" + str(i % 7) + ".jpg",
             )
 
     @staticmethod

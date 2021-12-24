@@ -3,7 +3,7 @@ from django.shortcuts import render
 from app.models import *
 
 
-def paginate(objects_list, request, limit=3):
+def paginate(objects_list, request, limit=10):
     paginator = Paginator(objects_list, limit)
     page_num = request.GET.get('page')
 
@@ -11,10 +11,10 @@ def paginate(objects_list, request, limit=3):
 
 
 def index(request):
-    content = paginate(Question.objects.all(), request)
+    page = paginate(Question.objects.all(), request)
     popular_tags = Tag.objects.popular_tags()
 
-    return render(request, 'index.html', {'questions': content, 'popular_tags': popular_tags})
+    return render(request, 'index.html', {'page': page, 'popular_tags': popular_tags})
 
 
 def ask(request):
@@ -24,27 +24,28 @@ def ask(request):
 
 
 def question(request, pk):
-    main_question = Question.objects.get(id=pk)
-    answers_page = paginate(Answer.objects.by_question(pk), request, limit=3)
+    question = Question.objects.get(id=pk)
+    page = paginate(Answer.objects.by_question(pk), request, limit=5)
     popular_tags = Tag.objects.popular_tags()
 
-    return render(request, 'one_question_page.html', {'main_question': main_question, 'answers': answers_page,
+    return render(request, 'question.html', {'question': question, 'page': page,
                                                       'popular_tags': popular_tags})
 
 
 def hot(request):
-    content = paginate(Question.objects.hot(), request)
+    page = paginate(Question.objects.hot(), request)
     popular_tags = Tag.objects.popular_tags()
 
-    return render(request, 'index.html', {'questions': content, 'popular_tags': popular_tags})
+    return render(request, 'hot.html', {'page': page, 'popular_tags': popular_tags})
 
 
 def tag(request, tag):
-    questions_page = paginate(Question.objects.by_tag(tag), request)
+    page = paginate(Question.objects.by_tag(tag), request)
     popular_tags = Tag.objects.popular_tags()
 
-    return render(request, 'question_by_tag.html', {'questions': questions_page, 'tag': tag,
-                                                    'popular_tags': popular_tags})
+    return render(request, 'tag.html', {'page': page,
+                                        'tag': tag,
+                                        'popular_tags': popular_tags})
 
 
 def settings(request):

@@ -4,9 +4,9 @@
 	<div class="row question">
 		<div class="col-2">
 			<div class="avatar">
-				<img class="question_img" src="{{ question.author.avatar }}" alt="">
+				<img class="question_img" src="{{ question.profile_id.avatar.url }}" alt="">
 				<h5>
-					{{ question.author.user.username }}
+					{{ question.profile_id.user_id.username }}
 				</h5>
 			</div>
 		</div>
@@ -21,14 +21,13 @@
 		<dev class="row">
 			<div class="col-2 avatar">
 				<div class="inline">
-					<a> {{ question.like }} </a>
+					<a> {{ question.rating }} </a>
 					<button class="like" type="submit">Like</button>
 					<button class="dislike" type="submit" style="color: white">Dislike</button>
-					<a> {{ question.dislike }} </a>
 				</div>
 			</div>
 			<div class="inline col-10">
-					<a href="{% url 'question' question.pk %}">answers:</a>
+					<a href="{% url 'question' question.pk %}">answers({{ question.number_of_answers }})</a>
 					<a style="">Tags:
 						{% for tag in question.tags.all %}
 							<a href="{% url 'tag' tag %}"> {{ tag }} </a>

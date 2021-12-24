@@ -11,7 +11,7 @@
 		</div>
 		<div class="col-11">
 			<h5 class="new_questions post">Answers</h5>
-			{% for answer in answers %}
+			{% for answer in page %}
 				{% include 'include/answer.html'%}
 			{% endfor %}
 			{% include 'include/paginator.html'%}

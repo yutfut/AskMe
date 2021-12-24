@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
-{% block title %} Log In {% endblock %}
+{% block title %} Tag {% endblock %}
 {% load static %}
 
 {% block content %}
 	<div>
 		<div class="inline">
 			<p class="new_questions">
-				Tag: Python
+				Tag: {{ tag }}
 			</p>
 		</div>
-		{% include 'include/question.html'%}
-		{% include 'include/question.html'%}
-		{% include 'include/question.html'%}
-
+		{% for question in page %}
+			{% include 'include/question.html'%}
+		{% endfor %}
 		{% include 'include/paginator.html'%}
 	</div>
 {% endblock %}
